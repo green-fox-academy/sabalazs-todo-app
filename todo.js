@@ -4,6 +4,7 @@ import minimist from 'minimist';
 import { getTodoList } from './getTodoList.js';
 import { printMessage } from './printMessage.js';
 import { addNew } from './addNew.js';
+import { remove } from './remove.js';
 
 const args = minimist(process.argv);
 try {
@@ -11,6 +12,8 @@ try {
         printTodoList();
     } else if (args.a) {
         addNew(args.a);
+    } else if (args.r) {
+        remove(args.r);
     } else {
         printManual();
     }
