@@ -1,8 +1,9 @@
 'use strict';
 
 import fs from 'fs';
+import { Todo } from './TodoClass.js';
 
-//getting todolist from the provided file and returning it as an array. if file doesnt exist, its created
+//getting todo list from the provided file and returning it as an array of Todo objects. if the file doesnt exist, its created
 export function getTodoList(file) {
 
     let todoList = [];
@@ -11,12 +12,13 @@ export function getTodoList(file) {
     } else {
         fs.writeFileSync(file, '');
     }
-
-    //removing line breaks
-    todoList.forEach((element, index) => todoList[index] = todoList[index].trim());
+        
+    for (let i = 0; i < todoList.length; i++) {
+        todoList[i] = new Todo(i+1, todoList[i].trim());
+    }
 
     //removing last element if its empty
-    if (todoList[todoList.length - 1] === '') todoList.pop();
+    if (todoList[todoList.length - 1].description === '') todoList.pop();
 
     return (todoList);
 }

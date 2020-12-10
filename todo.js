@@ -27,10 +27,10 @@ function printTodoList() {
     let todoList = getTodoList(filePath);
 
     //checking for empty todo list
-    if (todoList.length <= 1 && !todoList[0]) {
+    if (todoList.length === 0) {
         printMessage('Nincs mára tennivalód!');
         return;
     }
     //printing
-    todoList.forEach((item, index) => printMessage(`${index + 1}. - ${item}`));
+    todoList.forEach((item) => printMessage(`${item.id}. - ${item.description}`));
 }
