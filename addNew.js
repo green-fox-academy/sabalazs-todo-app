@@ -11,6 +11,4 @@ export function addNew(todo, file = filePath) {
         fs.appendFileSync(file, `${todo}`);
     }
     printMessage(`${todo} was added.`);
-
-
 }
