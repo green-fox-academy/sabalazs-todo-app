@@ -19,7 +19,7 @@ export function getTodoList(file = filePath) {
     }
 
     //removing last element if its empty
-    if (todoList[todoList.length - 1].description === '') todoList.pop();
+    if (todoList.length > 0 && todoList[todoList.length - 1].description === '') todoList.pop();
 
     return (todoList);
 }
