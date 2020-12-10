@@ -25,6 +25,12 @@ function printManual() {
 function printTodoList() {
     //reading from file
     let todoList = fs.readFileSync('todo-data.txt', 'utf8').split(';');
+    
+    //checking for empty todo list
+    if (todoList.length <= 1 && !todoList[0]) {
+        console.log('Nincs mára tennivalód!');
+        return;
+    }
 
     //removing line breaks
     todoList.forEach((element, index) => todoList[index] = todoList[index].trim());
