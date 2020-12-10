@@ -6,13 +6,16 @@ import { printMessage } from './printMessage.js';
 import { addNew } from './addNew.js';
 
 const args = minimist(process.argv);
-
-if (args.l) {
-    printTodoList();
-} else if (args.a) {
-    addNew(args.a);
-} else {
-    printManual();
+try {
+    if (args.l) {
+        printTodoList();
+    } else if (args.a) {
+        addNew(args.a);
+    } else {
+        printManual();
+    }
+} catch(error) {
+    printMessage(error.message);
 }
 
 function printManual() {
