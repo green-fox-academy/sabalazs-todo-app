@@ -9,6 +9,8 @@ const args = minimist(process.argv);
 
 if (args.l) {
     printTodoList();
+} else if (args.a) {
+    addNew(args.a);
 } else {
     printManual();
 }
