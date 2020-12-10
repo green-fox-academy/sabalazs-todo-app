@@ -32,5 +32,5 @@ function printTodoList() {
         return;
     }
     //printing
-    todoList.forEach((item) => printMessage(`${item.id}. - ${item.description}`));
+    todoList.forEach((item) => item.print());
 }
