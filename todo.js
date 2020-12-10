@@ -40,6 +40,9 @@ function printTodoList() {
     //removing line breaks
     todoList.forEach((element, index) => todoList[index] = todoList[index].trim());
 
+    //removing last element if its empty
+    if (todoList[todoList.length-1] === '') todoList.pop();
+
     //printing
     todoList.forEach((item, index) => console.log(`${index + 1}. - ${item}`));
 }
