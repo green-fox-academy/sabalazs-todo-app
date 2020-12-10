@@ -3,8 +3,8 @@
 import minimist from 'minimist';
 import fs from 'fs';
 
-
-const args = minimist(process.argv.slice(2));
+const fileName = "./data/" + "example.txt";
+const args = minimist(process.argv);
 
 if (args.l) {
     printTodoList();
@@ -23,8 +23,13 @@ function printManual() {
 }
 
 function printTodoList() {
-    //reading from file
-    let todoList = fs.readFileSync('todo-data.txt', 'utf8').split(';');
+    //reading from file and creating it, if it doesnt exist
+    let todoList = [];
+    if (fs.existsSync(fileName)) {
+        todoList = fs.readFileSync(fileName, 'utf8').split(';');
+    } else {
+        fs.writeFileSync(fileName, '');
+    }
     
     //checking for empty todo list
     if (todoList.length <= 1 && !todoList[0]) {
