@@ -3,7 +3,7 @@
 import minimist from 'minimist';
 import { getTodoList } from './getTodoList.js';
 import { printMessage } from './printMessage.js';
-import { filePath } from './config.js';
+import { addNew } from './addNew.js';
 
 const args = minimist(process.argv);
 
@@ -24,7 +24,7 @@ function printManual() {
 }
 
 function printTodoList() {
-    let todoList = getTodoList(filePath);
+    let todoList = getTodoList();
 
     //checking for empty todo list
     if (todoList.length === 0) {

@@ -2,9 +2,10 @@
 
 import fs from 'fs';
 import { Todo } from './TodoClass.js';
+import { filePath } from './config.js';
 
 //getting todo list from the provided file and returning it as an array of Todo objects. if the file doesnt exist, its created
-export function getTodoList(file) {
+export function getTodoList(file = filePath) {
 
     let todoList = [];
     if (fs.existsSync(file)) {
