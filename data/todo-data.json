@@ -1,12 +1,7 @@
 [
     {
         "id": 1,
-        "description": "alma",
-        "completed": true
-    },
-    {
-        "id": 2,
-        "description": "alma",
+        "description": "valami",
         "completed": true
     }
 ]

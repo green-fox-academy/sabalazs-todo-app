@@ -7,16 +7,16 @@ import { filePath } from './config.js';
 //getting todo list from the provided file and returning it as an array of Todo objects. if the file doesnt exist, its created
 export function getList(file = filePath) {
 
-    let todoList = [];
+    let list = [];
     if (fs.existsSync(file)) {
-        todoList = JSON.parse(fs.readFileSync(file, 'utf8'));
+        list = JSON.parse(fs.readFileSync(file, 'utf8'));
     } else {
         fs.writeFileSync(file, '[]');
     }
         
-    for (let i = 0; i < todoList.length; i++) {
-        todoList[i] = new Todo(todoList[i].id, todoList[i].description, todoList[i].completed);
+    for (let i = 0; i < list.length; i++) {
+        list[i] = new Todo(list[i].id, list[i].description, list[i].completed);
     }
 
-    return (todoList);
+    return (list);
 }
