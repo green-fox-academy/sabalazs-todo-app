@@ -15,6 +15,7 @@ try {
     } else if (args.r) {
         remove(args.r);
     } else {
+        if (Object.keys(args).length > 1) printMessage('Nem támogatott argumentum!');
         printManual();
     }
 } catch(error) {
