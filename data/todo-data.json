@@ -1,17 +1,12 @@
 [
     {
         "id": 1,
-        "description": "valami",
-        "completed": true
+        "description": "tennivaló",
+        "completed": false
     },
     {
         "id": 3,
-        "description": "harmadik",
-        "completed": true
-    },
-    {
-        "id": 3,
-        "description": "boltba menni",
+        "description": "tennivaló3",
         "completed": true
     }
 ]
