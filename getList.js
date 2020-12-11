@@ -17,6 +17,6 @@ export function getList(file = filePath) {
     for (let i = 0; i < list.length; i++) {
         list[i] = new Todo(list[i].id, list[i].description, list[i].completed);
     }
-
     return (list);
+    
 }
