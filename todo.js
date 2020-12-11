@@ -1,7 +1,7 @@
 'use strict';
 
 import minimist from 'minimist';
-import { getTodoList } from './getTodoList.js';
+import { getList } from './getList.js';
 import { printMessage } from './printMessage.js';
 import { addNew } from './addNew.js';
 import { remove } from './remove.js';
@@ -32,7 +32,7 @@ function printManual() {
 }
 
 function printTodoList() {
-    let todoList = getTodoList();
+    let todoList = getList();
 
     //checking for empty todo list
     if (todoList.length === 0) {
