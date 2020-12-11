@@ -36,13 +36,15 @@ function printManual() {
 }
 
 function printTodoList() {
-    let todoList = getList();
+    let list = getList();
 
     //checking for empty todo list
-    if (todoList.length === 0) {
+    if (list.length === 0) {
         printMessage('Nincs mára tennivalód!');
         return;
     }
     //printing
-    todoList.forEach((item) => item.print());
+    for (let i = 0; i < list.length; i++) {
+        printMessage(`${i + 1}. - ${list[i].description}`);
+    }
 }

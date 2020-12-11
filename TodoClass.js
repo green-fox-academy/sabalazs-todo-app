@@ -1,7 +1,5 @@
 'use strict';
 
-import { printMessage } from "./printMessage.js";
-
 export class Todo {
     id;
     description;
@@ -11,9 +9,5 @@ export class Todo {
         this.id = id;
         this.description = description;
         this.completed = completed;
-    }
-
-    print() {
-        printMessage(`${this.id}. - ${this.description}`);
     }
 }
