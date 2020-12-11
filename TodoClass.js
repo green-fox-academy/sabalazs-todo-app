@@ -5,12 +5,12 @@ import { printMessage } from "./printMessage.js";
 export class Todo {
     id;
     description;
-    urgent;
+    completed;
 
-    constructor(id, description, urgent = false) {
+    constructor(id, description, completed = false) {
         this.id = id;
         this.description = description;
-        this.urgent = urgent;
+        this.completed = completed;
     }
 
     print() {

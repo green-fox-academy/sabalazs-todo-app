@@ -5,6 +5,7 @@ import { getList } from './getList.js';
 import { printMessage } from './printMessage.js';
 import { addNew } from './addNew.js';
 import { remove } from './remove.js';
+import { markCompleted } from './markCompleted.js';
 
 const args = minimist(process.argv);
 try {
@@ -14,6 +15,8 @@ try {
         addNew(args.a);
     } else if (args.r) {
         remove(args.r);
+    } else if (args.c) {
+        markCompleted(args.c);
     } else {
         if (Object.keys(args).length > 1) printMessage('Nem támogatott argumentum!');
         printManual();

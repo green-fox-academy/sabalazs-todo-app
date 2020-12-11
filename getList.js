@@ -15,8 +15,8 @@ export function getList(file = filePath) {
     }
         
     for (let i = 0; i < todoList.length; i++) {
-        todoList[i] = new Todo(todoList[i].id, todoList[i].description, todoList[i].urgent);
+        todoList[i] = new Todo(todoList[i].id, todoList[i].description, todoList[i].completed);
     }
-    
+
     return (todoList);
 }

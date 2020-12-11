@@ -2,16 +2,16 @@
     {
         "id": 1,
         "description": "Kutyát sétáltatni",
-        "urgent": false
+        "completed": false
     },
     {
         "id": 2,
         "description": "Tejet venni",
-        "urgent": false
+        "completed": false
     },
     {
         "id": 3,
         "description": "Megcsinálni a leckét",
-        "urgent": false
+        "completed": false
     }
 ]
