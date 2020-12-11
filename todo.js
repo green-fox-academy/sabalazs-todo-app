@@ -45,6 +45,6 @@ function printTodoList() {
     }
     //printing
     for (let i = 0; i < list.length; i++) {
-        printMessage(`${i + 1}. - ${list[i].description}`);
+        printMessage(`${i + 1}. - ${list[i].completed ? '[x]' : '[ ]'} ${list[i].description}`);
     }
 }

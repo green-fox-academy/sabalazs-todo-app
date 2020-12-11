@@ -7,6 +7,11 @@
     {
         "id": 3,
         "description": "harmadik",
-        "completed": false
+        "completed": true
+    },
+    {
+        "id": 3,
+        "description": "boltba menni",
+        "completed": true
     }
 ]
